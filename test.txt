@@ -1,1 +1,0 @@
-/home/zachary/armareforger-logparser/cmake/test.txt
