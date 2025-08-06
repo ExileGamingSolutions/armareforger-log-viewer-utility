@@ -7,17 +7,12 @@
 
 void configure::findConfigPath() {
   try {
-    const char *user = getenv("USER");
-    if (user != nullptr) {
-      _user = *user;
+    _user = getenv("USER");
 
-    } else {
-      throw("ERROR WITH FINDING PATH");
-    }
   } catch (...) {
   }
 
-  path.append(&_user);
+  path.append(_user);
   path.append("/.config/armareforger-log-viewer-utility_config.toml");
 }
 

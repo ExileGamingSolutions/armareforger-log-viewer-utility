@@ -7,7 +7,7 @@
 
 class configure {
 public:
-  char _user;
+  std::string _user;
   std::string path = "/home/";
   std::string downloadPath;
   int downloadPos;
