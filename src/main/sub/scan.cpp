@@ -2,12 +2,13 @@
 void scan::readFile(std::string file) {
   try {
     read.open(file);
-    write.open(file);
 
-    if (read.fail() || write.fail())
-      throw(1);
+    if (read.fail())
+      throw("CHECK PATH");
 
-    std::cout << "OPENED!\n";
+    if (file == "def")
+      throw("PATH NOT CONFIGURED");
+    std::cout << "OPENED SUCCESSFULLY! \n";
 
   } catch (...) {
     std::cout << "CANNOT OPEN FILE\n";

@@ -2,9 +2,10 @@
 #include <iostream>
 
 int main() {
-  _scan.readFile("test.txt");
+
+  _scan.readFile(path);
   unParsedLogs = _scan.logLines;
   _parseSort.filter(unParsedLogs);
-  std::string message = _parseSort.init[0];
+
   return 0;
 }
