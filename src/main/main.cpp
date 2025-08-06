@@ -7,6 +7,8 @@ int main() {
   _configure.checkConfig();
   std::cout << _configure._user << std::endl;
   std::cout << _configure.path << std::endl;
+  _configure.newConfig();
+  std::cout << _configure._config[0] << std::endl;
   //
   //_scan.readFile(_configure.path);
   // unParsedLogs = _scan.logLines;
