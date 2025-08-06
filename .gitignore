@@ -38,3 +38,4 @@ test.text
 cmake/
 .vscode/
 .cache/
+Build/
