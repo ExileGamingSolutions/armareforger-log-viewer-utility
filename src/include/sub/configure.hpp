@@ -3,9 +3,14 @@
 #include <iomanip>
 #include <iostream>
 #include <string>
+#include <vector>
 
 class configure {
-  std::string defPath = "";
+public:
+  char _user;
+  std::string path = "/home/";
+  std::string downloadPath;
+  std::vector<std::string> _config;
   void findConfigPath();
   void checkConfig();
   void writeConfig();
