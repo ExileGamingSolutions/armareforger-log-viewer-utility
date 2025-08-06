@@ -44,7 +44,27 @@ void configure::checkConfig() {
   } catch (...) {
   }
   for (int i = 0; i < _config.size(); i++) {
+    if (_config[i].find("download")) {
+      downloadPos = i;
+      downloadPath = _config[i];
+    };
   }
 }
 
-void configure::writeConfig() {}
+void configure::writeConfig() {
+  std::fstream file;
+
+  try {
+    file.open(path, std::ios_base::out);
+    if (file.fail())
+      throw("FAIL TO OPEM CONFIG ");
+    else {
+      file.clear();
+      std::streamsize size = 5024;
+      for (int i = 0; i < _config.size(); i++) {
+        file.write(_config[i].c_str(), size);
+      }
+    }
+  } catch (...) {
+  }
+}
